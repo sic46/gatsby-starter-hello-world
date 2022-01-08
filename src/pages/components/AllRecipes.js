@@ -1,25 +1,25 @@
 import React from 'react'
 import RecipeList from './RecipeList'
 import TagsList from './TagsList'
-import { graphql,useStaticQuery } from 'gatsby'
-const query = graphql`
-  {
-    allContentfulRecipe(sort: {fields: title}) {
-      nodes {
-        id
-        title
-        cookTime
-        prepTime
-        content {
-          tags
-        }
-        image {
-          gatsbyImageData(placeholder: TRACED_SVG, layout: CONSTRAINED)
-        }
-      }
-    }
-  }
-`
+// import { graphql,useStaticQuery } from 'gatsby'
+// const query = graphql`
+//   {
+//     allContentfulRecipe(sort: {fields: title}) {
+//       nodes {
+//         id
+//         title
+//         cookTime
+//         prepTime
+//         content {
+//           tags
+//         }
+//         image {
+//           gatsbyImageData(placeholder: TRACED_SVG, layout: CONSTRAINED)
+//         }
+//       }
+//     }
+//   }
+// `
 
 const AllRecipes = () => {
     const data = useStaticQuery(query);
