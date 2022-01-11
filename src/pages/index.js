@@ -5,24 +5,26 @@ import AllRecipes from "./components/AllRecipes"
 export default function Home() {
   return (
     <>
-    <Layout>
-      <main className="page">
-        <header className="hero">
-          <StaticImage src="./assets/images/main.jpeg" alt="egg"
-          className="hero-img"
-          placeholder="tracedSVG"
-          layout="fullWidth"></StaticImage>
-          <div className="hero-container">
-            <div className="hero-text">
-              <h1>
-                simply recipes</h1>
+      <Layout>
+        <main className="page">
+          <header className="hero">
+            <StaticImage
+              src="./assets/images/main.jpeg"
+              alt="egg"
+              className="hero-img"
+              placeholder="tracedSVG"
+              layout="fullWidth"
+            ></StaticImage>
+            <div className="hero-container">
+              <div className="hero-text">
+                <h1>simply recipes</h1>
                 <h4>my favourite recipes</h4>
-                </div>
               </div>
-            </header>
-            <AllRecipes/>
-            </main>
-    </Layout>
+            </div>
+          </header>
+          <AllRecipes />
+        </main>
+      </Layout>
     </>
   )
 }
