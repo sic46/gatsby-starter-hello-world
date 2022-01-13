@@ -18,7 +18,7 @@
     "gatsby": "^4.4.0",
     "gatsby-plugin-image": "^2.5.1",
     "gatsby-plugin-sharp": "^4.5.1",
-    "gatsby-plugin-styled-components": "^5.4.0",
+    "gatsby-plugin-styled-components": "^5.5.0",
     "gatsby-source-contentful": "^7.2.0",
     "gatsby-source-filesystem": "^4.5.1",
     "gatsby-transformer-sharp": "^4.5.0",
