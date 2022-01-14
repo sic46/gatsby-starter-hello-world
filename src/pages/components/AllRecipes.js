@@ -6,7 +6,7 @@ const Images = () => {
   return (
     <Wrapper>
       <StaticImage
-        src=".../src/assets/images/recipes/big.jpg"
+        src="../src/assets/images/recipes/big.jpg"
         alt="food"
         placeholder="tracedSVG"
         layout="fullwidth"
