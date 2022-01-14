@@ -1,37 +1,34 @@
 import React from "react"
-import RecipeList from "./RecipeList"
-import TagsList from "./TagsList"
-import { graphql, useStaticQuery } from "gatsby"
-const query = graphql`
-  {
-    allContentfulRecipe(sort: { fields: title }) {
-      nodes {
-        id
-        title
-        cookTime
-        prepTime
-        content {
-          tags
-        }
-        image {
-          gatsbyImageData(placeholder: TRACED_SVG, layout: CONSTRAINED)
-        }
-      }
-    }
+import styled from "styled-components"
+
+import { StaticImage } from "gatsby-plugin-image"
+const Images = () => {
+  return (
+    <Wrapper>
+      <StaticImage
+        src=".../src/assets/images/recipes/big.jpg"
+        alt="food"
+        placeholder="tracedSVG"
+        layout="fullwidth"
+        className="example-img"
+        as="section"
+      />
+    </Wrapper>
+  )
+}
+const Wrapper = styled.section`
+  width: 70vw;
+  margin: 0 auto;
+  display: grid;
+  text-align: center;
+  gap: 2rem;
+
+  article {
+    border: 2px solid red;
+  }
+  .example-img {
+    border-radius: 1rem;
   }
 `
 
-const AllRecipes = () => {
-  const data = useStaticQuery(query)
-  const recipes = data.allContentfulRecipe.nodes
-
-  return (
-    <section className="recipes-container">
-      <h4>All recipes</h4>
-      <TagsList recipes={recipes} />
-      <RecipeList recipes={recipes} />
-    </section>
-  )
-}
-
-export default AllRecipes
+export default Images
